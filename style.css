@@ -648,6 +648,13 @@ ul a{
     padding: 0;
     }
 
+    header{
+        position: sticky;
+        top: 0;
+        background: var(--White);
+        height: 103px;
+    }
+
     .limitador-body{
         max-width: 70%;
         margin: 0;
@@ -666,6 +673,7 @@ ul a{
         align-items: center;
         background: transparent;
         flex-basis: auto;
+        z-index: 15;
     }
 
     button{
@@ -679,6 +687,8 @@ ul a{
         list-style-type: none;
         gap: 1.5rem;
         color: var(--Gray-600);
+        z-index: 10;
+        background: white;
 
     }
 
@@ -686,7 +696,7 @@ ul a{
         display: block;
         background: var(--Green-500);
         background: linear-gradient(to right top, #32d25d, #4dd66f, #62da80, #76de90, #88e1a0);
-        padding: 1.2rem;
+        padding: .8rem;
         border-radius:35px;
         width: 190px;
         color: white;
@@ -695,44 +705,61 @@ ul a{
         display: flex;
         justify-content: center;
         margin-top: 0;
+        z-index: 10;
     }
 
     .top-main{
+        /* background-color: #4dd66f; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        flex-basis: auto;
         
         width: 100%;
-        height: 60vh;
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
+        height: 40vh;
+       
         box-sizing: border-box;
+    }
+
+    .back-mobile{
+        display: none;
     }
 
     .mobile{
-        position: absolute;
-        left: 150px;
-        background-image: none;
-        box-sizing: border-box;
+        grid-row: 1 / -1;
         width: 100%;
+        height: 200%;
+        grid-column: 3 / -1;
+        /* position: absolute; */
+        background-image: unset ;
+        display: unset;
+         background-image: url(/images/image-mockups.png), url(/images/bg-intro-desktop.svg)  ;
+         background-position: left bottom;
+         z-index: -1;
+         /* margin-left: calc(100% - 95%); */
     }
 
     .mobile img{
-        width: 700px;
-        height: 700px;
+        display: none;
+        /* height: 900px; */
+        /* grid-column: 3 / -1; */
     }
 
-    .back-mobile img{
-        position: absolute;
-        left: 690px;
+    .cont{
+        display: none;
     }
+
+
 
     .banking{
-        /* margin-top: 100px; */
-        /* margin-right: 900px; */
+        grid-column: 2 / -1;
         display: flex;
         justify-content: flex-start;
         align-items: start;
+        margin-top: 0;
+        z-index: -1;
         gap: 1rem;
-        width: 20%;
+        width: 30%;
+        margin-left: calc(100% - 85%);
     }
 
     .banking h2, .banking p{
@@ -889,7 +916,7 @@ ul a{
         padding-top: 0;
         height: 50%;
         margin-top: 1.5rem;
-        gap: .5rem;
+        gap: 1.5rem;
     }
     .foot-nav {
         display: flex;
