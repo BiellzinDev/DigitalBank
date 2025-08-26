@@ -16,7 +16,17 @@ html{
     margin: 0;
     padding: 0;
 }
-
+.banking a, footer .request{
+    display: initial;
+    background: var(--Green-500);
+    background: linear-gradient(to right top, #32d25d, #4dd66f, #62da80, #76de90, #88e1a0);
+    padding: 1.2rem;
+    border-radius:35px;
+    width: 190px;
+    color: white;
+    text-decoration: none;
+    margin-top: 1.4rem;
+}
 body{
     height: 100%;
     width: 100%;
@@ -52,12 +62,12 @@ header{
 }
 .top-main{
     width: 100%;
-    height: 90vh;
-    justify-content: space-between;
+    height: 95vh;
+    justify-content: space-around;
 }
 .main-img{
     width: 100%;
-    height: 55%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,6 +75,7 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
+    
 }
 .back-mobile{
     width: 100%;
@@ -74,33 +85,24 @@ header{
     background-attachment: fixed;
     background-position: top;
     background-size: 87%;
+    
 }
 .banking{
+    width: 80%;
     text-align: center;
     justify-content: center;
-    gap: .5rem;
+    gap: 1rem;
+    padding-bottom: 3rem;
 
 }
-.banking a{
-    display: initial;
-    background: var(--Green-500);
-    background: linear-gradient(nulldeg,rgba(35, 222, 76, 1) 51%, rgba(148, 187, 233, 1) 76%);
-    padding: 1.2rem;
-    border-radius:35px;
-    width: 190px;
-    color: white;
-    text-decoration: none;
-    margin-top: 1rem;
-}
-
 .banking h2{
-    font-size: 2.1rem;
-    font-weight: 300;
-    color: var(--Gray-600);
+    font-size: clamp(2rem,4vh,4rem);
+    font-weight: 600;
+    color: var(--Blue-950);
 }
 
-.banking p{
-    font-size: 0.8rem;
+.banking p,.portifolio p{
+    font-size: clamp(0.8rem,2vh,2rem);
     color: var(--Gray-600);
 }
 
@@ -110,6 +112,7 @@ header{
     text-align: center;
     justify-content: center;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .align-art1{
@@ -117,14 +120,14 @@ header{
 }
 
 .container-desktop{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .container-artigos{
-    width: 80%;;
+    width: 100%;;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -134,9 +137,13 @@ header{
 .container{
     gap: 1rem;
     justify-content: center;
+    width: 75%;
 }
-
+.container-desktop h2{
+    font-size: clamp(2.2rem,3vh,4rem);
+}
 .container h2{
+    font-size:(2rem,4vh,4rem);
     font-weight: 300;
     color: var(--Blue-950);
     padding-bottom: 1rem;
@@ -150,9 +157,13 @@ header{
 
 .box h2{
     padding: 1rem;
+    font-size: clamp(1.4rem,2vh,3rem);
+}
+.box br{
+    display: none;
 }
 .box{
-    width: 80%;
+    width: 100%;
     margin-top: 1rem;
     height: 200px;
     gap: 2rem;
@@ -160,47 +171,40 @@ header{
 
 .artigos{
     width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-grow: 1;
     align-items: center;
-    margin: 0 auto;
 }
-
+.artigos-title{
+    text-align: center;
+    width: 75%;
+}
 .artigos h2{
     color: var(--Blue-950);
     padding: 3rem;
 }
-
-.artigos div {
-    width: 330px;
-    box-sizing: border-box;
+.limite-art{
+    width: 75%;
 }
-
 .artigos img{
     width: 100%;
     height: 180px;
 }
-
 .autor {
     color: var(--Gray-600);
     font-size: small;
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
-
-
 .artigos .artigos-descricao{
-    width: 280px;
-    margin-left: 1.5rem;
+    padding-left: 1rem;
 }
 
 .artigos a{
     text-decoration: none;
     color: var(--Blue-950);
-
 }
 .artigos-text{
     color: var(--Gray-600);
@@ -212,15 +216,14 @@ header{
 footer{
     width: 100%;
     background: var(--Blue-950);
-    display: flex;
     text-align: center;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-
-    height: 500px;
+    height: 31,25;
+    padding-bottom: 3rem;
 }
-
+.limitado{
+    width: 90%;
+}
 .foot-logo{
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -233,7 +236,7 @@ footer{
 }
 
 .foot-nav,ul{
-    height: 200px;
+    height: 12,5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -244,9 +247,10 @@ footer{
     text-decoration: none;
     color: var(--White);
     gap: 2rem;
-
 }
-
+.foot-request p{
+    padding: 1rem;
+}
 footer p{
     color: var(--Gray-600);
     padding-bottom: 2rem;
@@ -255,33 +259,17 @@ footer p{
     height: fit-content;
     gap: 15px;
 }
-
 .nav-foot-1 ul a,.nav-foot-2 ul a{
     list-style-type: none;
     text-decoration: none;
     color: var(--White);
 }
-
-footer .request, .banking .request{
-    display: initial;
-    background: var(--Green-500);
-    background: linear-gradient(to right top, #32d25d, #4dd66f, #62da80, #76de90, #88e1a0);
-    padding: 1.2rem;
-    border-radius:35px;
-    width: 190px;
-    color: white;
-    text-decoration: none;
-    margin-top: 1rem;
-}
-
 footer p{
     color: var(--Gray-600);
 }
-
 .attribution{
     background-color: var(--Gray-100);
 }
-
 .header button:hover + ul{
     position: absolute;
     display: flex;
@@ -295,170 +283,67 @@ footer p{
     padding: 1rem;
     border-radius: 5px;
     color: var(--Blue-950);
-    box-shadow: 2px -26px 50px 15px #0E0347;
+    box-shadow: 2px 5px 50px 15px #0E0347;
 }
 ul a{
     color: var(--Blue-950);
 }
-@media(min-width:770px){
-
+@media(min-width:750px){
     button{
         display: none;
     }
-
+    header .request{
+        display: initial;
+        background: var(--Green-500);
+        background: linear-gradient(to right top, #32d25d, #4dd66f, #62da80, #76de90, #88e1a0);
+        padding: 1rem;
+        border-radius:35px;
+        color: white;
+        text-decoration: none;
+    }
+    .header,header{
+        height: 25%;
+    }
     .header-nav{
         display: flex;
         flex-direction: row;
-        align-items: center;
-        list-style-type: none;
         gap: 1.5rem;
-        color: var(--Gray-600);
-        z-index: 10;
-        background: white;
-
+        margin: 0;
     }
-
-    .header .request{
-        display: block;
-        background: var(--Green-500);
-        background: linear-gradient(to right top, #32d25d, #4dd66f, #62da80, #76de90, #88e1a0);
-        padding: .8rem;
-        border-radius:35px;
-        width: 190px;
-        color: white;
-        text-decoration: none;
-        margin-top: 1rem;
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-        z-index: 10;
-    }
-
-    .top-main{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        flex-basis: auto;
-        width: 100%;
-        height: 40vh;
-    }
-
     .back-mobile{
+        background-size: 70%;
+    }
+    .container-artigos{
+        flex-direction: row;
+        gap: .5rem;
+        width: 80%;
+    }
+    .container{
+        width: 100%;
+    }
+    .container br{
         display: none;
     }
-
-    .mobile{
-        grid-row: 1 / -1;
-        width: 100%;
-        height: 200%;
-        grid-column: 3 / -1;
-        background-image: unset ;
-         background-image: url(/images/image-mockups.png), url(/images/bg-intro-desktop.svg)  ;
-         background-position: left bottom;
-         z-index: -1;
+    .box br{
+        display: initial;
     }
-
-    .banking h2, .banking p{
-        text-align: left;
-    }
-
-    .banking .request{
-        padding: .8rem;
-    }
-    .banking h2{
-        color: var(--Blue-950);
-        font-size: 2.5rem;
-    }
-
-    .portifolio{
-        background: var(--Gray-100);
-        width: 100%;
-        padding-top: 6rem;
-        padding-bottom: 4rem;
-    }
-
-    .container-desktop{
-        width: 37%;
-        text-align: left;
-    }
-
-    .container{
-        align-items: start;
-    }
-
-    .container-artigos{
-        width: 100%;
-        text-align: left;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        box-sizing: border-box;
-        flex-basis: auto;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    .align-art1{
-        gap: 1rem;
-    }
-
     .box{
-        width: 210px;
         height: 250px;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: space-between;
         flex-basis: auto;
-        gap: 2rem;
     }
-
-    .box img{
-        width: 60px;
-        height: 60px;
-    }
-
     .box h2{
-        font-size: 1.4rem;
-        padding-left: 0;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding: 1rem;
     }
     .artigos{
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-
-    .artigos .artigos-title h2{
-        text-align: left;
-    }
     .artigos .limite-art{
         display: flex;
-        flex-direction: row;
         justify-content: center;
         gap: 2rem;
-        width: 100%;
-    }
-    .artigos .artigos-title{
-        padding: 0;
-        margin-left: 0;
-        width: 100%;
-    }
-    .artigos-title h2{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .art-limiter img{
-        width: 100%;
-    }
-    .artigos .artigos-descricao{
-        width: 200px;
-        margin-left: 0;
-    }
-    .artigos .art-limiter{
-        padding-left: 0;
-        margin-left: 0;
-        width: 300px;
-        box-sizing: border-box;
     }
     .limitado{
         width: 70%;
@@ -523,7 +408,6 @@ ul a{
     .nav li{
         display: flex;
         align-items: center;
-        height: 90px;
         border-bottom: 5px solid transparent;
     }
 
