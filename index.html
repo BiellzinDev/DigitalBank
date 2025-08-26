@@ -6,12 +6,13 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Digitalbank landing page</title>
+
+  <link rel="stylesheet" href="style.css">
 
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -23,10 +24,10 @@
   <header>
       <div class="header limitador-body">
         <h1>
-          <a href="/"><img src="./images/logo-dark.svg" alt="Logo Digitalbank"></a>
+          <a href="/"><img src="/images/logo-dark.svg" alt="Logo Digitalbank"></a>
         </h1>
         <nav class="nav">
-          <button><img src="./images/icon-hamburger.svg" alt=""></button>
+          <button><img src="images/icon-hamburger.svg" alt=""></button>
           <ul class="header-nav">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -39,15 +40,15 @@
       </div>
   </header>
 
-  <section class="top-main">
-        <div class="mobile">
-            <img src="./images/bg-intro-desktop.svg" alt="" class="desktop">
+  <section class="top-main flex-column-center">
+        <div class="main-img">
+          <div class="back-desktop">
+          </div>
+          <div class="back-mobile">
+          </div>
+          <div class="back-cell"></div>
         </div>
-        <div class="cont">
-          <img src="./images/bg-intro-mobile.svg" alt="">
-        </div>
-        <div class="back-mobile"><img src="./images/image-mockups.png" alt="" ></div>
-        <div class="banking">
+        <div class="banking flex-column-center">
           <h2>Next generation digital banking</h2>
           <p>Take your financial life online. Your Digitalbank account will be a one-stop-shop
           for spending, saving, budgeting, investing, and much more.</p>
@@ -55,23 +56,23 @@
         </div>
   </section>
   
-  <section class="portifolio">
-    <div class="container limitador-body">
+  <section class="portifolio flex-column-center">
+    <div class="container limitador-body flex-column-center">
         <div class="container-desktop">
           <h2>Why choose Digitalbank?</h2>
           <p>We leverage Open Banking to turn your bank account into your financial hub. Control
           your finances like never before.</p>
         </div>
     <div class="container-artigos">
-      <article class="align-art1">
+      <article class="align-art1 flex-column-center">
         <div class="box">
-          <img src="./images/icon-online.svg" alt="">
+          <img src="images/icon-online.svg" alt="">
           <h2>Online Banking</h2>
           <p>Our modern web and mobile applications allow you to keep track of your finances
           wherever you are in the world.</p>
         </div>
       </article>
-      <article class="align-art1">
+      <article class="align-art1 flex-column-center">
         <div class="box">
           <img src="images/icon-budgeting.svg" alt="">
           <h2>Simple Budgeting</h2>
@@ -79,17 +80,17 @@
           close to hitting your limits.</p>
         </div>
       </article>
-      <article class="align-art1">
+      <article class="align-art1 flex-column-center">
         <div class="box">
-          <img src="./images/icon-onboarding.svg" alt="">
+          <img src="images/icon-onboarding.svg" alt="">
           <h2>Fast Onboarding</h2>
           <p>We don’t do branches. Open your account in minutes online and start taking control
           of your finances right away.</p>
         </div>
       </article>
-      <article class="align-art1">
+      <article class="align-art1 flex-column-center">
         <div class="box">
-          <img src="./images/icon-api.svg" alt="">
+          <img src="images/icon-api.svg" alt="">
           <h2>Open API</h2>
           <p >Manage your savings, investments, pension, and much more from one account. Tracking
           your money has never been easier.</p>
@@ -99,13 +100,13 @@
     </div>
   </section>
   
-  <section class="artigos">
+  <section class="artigos flex-column-center">
     <div class="artigos-title limitador-body">
       <h2>Latest Articles</h2>
     </div>
       <div class="limite-art limitador-body">
         <div class="art-limiter">
-          <img src="./images/image-currency.jpg" alt="">
+          <img src="images/image-currency.jpg" alt="">
           <div class="artigos-descricao">
             <p class="autor">By Claire Robinson</p>
             <a href="#">Receive money in any currency with no fees</a>
@@ -114,7 +115,7 @@
           </div>
         </div>
         <div class="art-limiter">
-          <img src="./images/image-restaurant.jpg" alt="">
+          <img src="images/image-restaurant.jpg" alt="">
           <div class="artigos-descricao">
             <p class="autor">By Wilson Hutton</p>
             <a href="#">Treat yourself without worrying about money</a>
@@ -132,7 +133,7 @@
           </div>
         </div>
         <div class="art-limiter">
-          <img src="./images/image-confetti.jpg" alt="">
+          <img src="images/image-confetti.jpg" alt="">
           <div class="artigos-descricao">
             <p class="autor">By Claire Robinson</p>
             <a href="#">Our invite-only Beta accounts are now live!</a>
@@ -143,16 +144,16 @@
       </div>
   </section>
   
-  <footer>
+  <footer class="flex-column-center">
     <div class="limitado limitador-body">
       <div class="foot-logo">
         <img src="images/logo-light.svg" alt="">
         <div class="icons">
-          <img src="./images/icon-facebook.svg" alt="">
-          <img src="./images/icon-youtube.svg" alt="">
-          <img src="./images/icon-twitter.svg" alt="">
-          <img src="./images/icon-pinterest.svg" alt="">
-          <img src="./images/icon-instagram.svg" alt="">
+          <img src="images/icon-facebook.svg" alt="">
+          <img src="images/icon-youtube.svg" alt="">
+          <img src="images/icon-twitter.svg" alt="">
+          <img src="images/icon-pinterest.svg" alt="">
+          <img src="images/icon-instagram.svg" alt="">
         </div>
       </div>
       <div class="foot-nav">
@@ -171,7 +172,7 @@
             </ul>
           </div>
       </div>
-        <div class="foot-request">
+        <div class="foot-request flex-column-center">
           <a href="#" class="request">Request Invite</a>
           <p>© Digitalbank. All Rights Reserved</p>
         </div>
