@@ -102,7 +102,7 @@ header{
 }
 
 .banking p,.portifolio p{
-    font-size: clamp(0.8rem,2vh,2rem);
+    font-size: clamp(0.9rem,3vh,2rem);
     color: var(--Gray-600);
 }
 
@@ -337,72 +337,67 @@ ul a{
     }
     .artigos{
         width: 100%;
+        height: 100%;
+        padding-bottom: 3rem;
         display: flex;
         flex-direction: column;
+    }
+    .artigos-title h2{
+        padding: 2;
     }
     .artigos .limite-art{
         display: flex;
         justify-content: center;
         gap: 2rem;
+        width: 80%;
     }
-    .limitado{
-        width: 70%;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .art-limiter img{
+        height: 30%;
+        width: 100%;
     }
-    footer{
-        flex-direction: row;
-        align-items: center;
-        height: 200px;
+    .art-limiter{
+        flex-basis: 130px;
     }
-    footer a{
-        color: var(--White);
+    .artigos-title{
+        width: 80%;
     }
-    .foot-logo{
+    .artigos-descricao p{
+        padding: .5rem 0 0 0;
+        padding-left: 0;
+    }
+    .artigos .artigos-descricao{
+        padding-left: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 50%;
-        margin-top: 1.5rem;
-        gap: 1.5rem;
-    }
-    .foot-nav {
-        display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        width: 250px;
-    }
-
-    .foot-nav,ul{
-        text-align: left;
-        margin-top: .8rem;
-        height: 80%;
-        gap: .1rem;
-    }
-
-    .foot-nav,ul,li{
-        height: 40%;
-        gap: .1rem;
-    }
-
-
-    .nav-foot-1, .nav-foot-2{
-        height: 100px;
-    }
-    footer ul{
         gap: 1rem;
     }
-
+    .limitado{
+        width: 80%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .foot-logo{
+        padding: 0;
+    }
+    .foot-nav {
+        flex-direction: row;
+        width: 250px;
+    }
+    .foot-nav,ul{
+        text-align: left;
+    }
     .foot-request{
         display: flex;
         flex-direction: column;
         align-items:end;
-        margin-top: 2rem;
-        gap: 1.5rem;
         height: 80%;
+    }
+    .foot-request .request {
+        margin: 0;
     }
 
     .nav li{
