@@ -337,23 +337,18 @@ ul a{
         padding: 1rem;
     }
     .artigos{
-        height: fit-content;
         justify-content: flex-start;
-    }
-    .artigos-title h2{
-        padding: 2;
+        padding-bottom: 5rem;
     }
     .artigos .limite-art{
         display: flex;
         justify-content: center;
         gap: 2rem;
-        width: 80%;
     }
     .art-limiter img{
-        height: 70%;
         width: 100%;
     }
-    .art-limiter{
+    .limite-art{
         flex-basis: auto;
     }
     .artigos-title{
@@ -370,9 +365,6 @@ ul a{
         justify-content: center;
         align-items: center;
         gap: 1rem;
-    }
-    footer{
-        padding: 0;
     }
     .limitado{
         width: 95%;
@@ -391,7 +383,7 @@ ul a{
     }
     .foot-nav {
         flex-direction: row;
-        width: 250px;
+        width: 30%;
     }
     .foot-nav,ul{
         text-align: left;
@@ -424,4 +416,49 @@ ul a{
         border-bottom: 5px solid var(--Green-500);
     }
 
+}
+@media(min-width:1020px){
+    .header{
+        width: 90%;
+    }
+    .nav a{
+        color: var(--Gray-600);
+    }
+    .top-main{
+        flex-direction: row-reverse;
+        z-index: -1;
+        height: 60vh;
+        width: 100vw;
+    }
+    .main-img{
+        background-image: none;
+        background: url(./images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        background-position: 0 -160px;
+    }
+    .back-mobile{
+        background-position: 150px -120px ;
+        background-attachment: initial;
+        background-size: contain;
+        background-origin: content-box;
+        width: 100%;
+    }
+    .banking{
+        text-align: left;
+        align-items: flex-start;
+        gap: 2rem;
+        
+    }
+    .banking a{
+        text-align: center;
+    }
+    .banking h2{
+        font-size: clamp(2rem,5vh,6rem);
+        font-weight: 400;
+    }
+    .banking p{
+        font-size: clamp(.5rem,5vh,1.3rem);
+    }
 }
