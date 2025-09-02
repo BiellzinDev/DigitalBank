@@ -67,7 +67,7 @@ header{
 }
 .main-img{
     width: 100%;
-    height: 70%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +84,7 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top;
-    background-size: 87%;
+    background-size: 75%;
     
 }
 .banking{
@@ -103,7 +103,7 @@ header{
 }
 
 .banking p,.portifolio p{
-    font-size: clamp(0.9rem,3vh,2rem);
+    font-size: clamp(0.3rem,3vh,1rem);
     color: var(--Gray-600);
 }
 
@@ -289,6 +289,9 @@ footer p{
 ul a{
     color: var(--Blue-950);
 }
+.request:hover{
+    opacity: .8;
+}
 @media(min-width:750px){
     button{
         display: none;
@@ -302,8 +305,16 @@ ul a{
         color: white;
         text-decoration: none;
     }
-    .header,header{
-        height: 25%;
+    header{
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+    }
+    .header{
+        height:100%;
+        align-items: center;
+        padding: 0;
+        width: 90%;
     }
     .header-nav{
         display: flex;
@@ -311,8 +322,11 @@ ul a{
         gap: 1.5rem;
         margin: 0;
     }
+    .top-main{
+        height: 90vh;
+    }
     .back-mobile{
-        background-size: 70%;
+        background-size: 80%;
     }
     .container-artigos{
         flex-direction: row;
@@ -411,48 +425,64 @@ ul a{
     footer ul a:hover,.artigos a:hover{
         color: var(--Green-500);
     }
+    .header-nav{
+        height: 100%;
+    }
+    .nav{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 
     .nav li:hover{
         border-bottom: 5px solid var(--Green-500);
+        cursor: pointer;
     }
 
 }
 @media(min-width:1020px){
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .header{
-        width: 90%;
+        width: 80%;
     }
     .nav a{
         color: var(--Gray-600);
     }
     .top-main{
         flex-direction: row-reverse;
-        z-index: -1;
-        height: 100vh;
-        width: 100vw;
+        /* z-index: 12; */
+        height: max-content;
+        width: 100%;
     }
     .main-img{
         background-image: none;
         background: url(./images/bg-intro-desktop.svg);
         background-repeat: no-repeat;
-        /* background-size: 100%; */
-        height: 100%;
-        background-position: 5% 60%;
-        z-index: 3;
+        height: max-content;
+        background-position: -17% 47%;
+        position: relative;
+        width: 100%;
+        height: 70vh;
     }
     .back-mobile{
-        background-position: 250px -160px ;
+        background-position: 135% 80% ;
         background-attachment: initial;
-        background-size: 80%;
-        height: 100vh;
+        /* background-size: 100%; */
         width: 100%;
-        z-index: 8;
+        height: 100vh;
+        z-index: 9;
+        position: absolute;
     }
     .banking{
         text-align: left;
         align-items: flex-start;
         gap: 2rem;
-        width: 70%;
-        
+        width: 55%;
+        padding-left: calc(100% - 90%);
     }
     .banking a{
         text-align: center;
@@ -463,5 +493,51 @@ ul a{
     }
     .banking p{
         font-size: clamp(.5rem,5vh,1.3rem);
+    }
+    .portifolio{
+        text-align: left;
+    }
+    .container{
+        width: 80%;
+    }
+    .container-artigos{
+        width: 100%;
+    }
+    .box h2{
+        padding-left: 0;
+    }
+    .box br{
+        display: none;
+    }
+    .artigos-title{
+        text-align: left;
+    }
+    .artigos-title h2{
+        padding-left: 0;
+    }
+    .art-limiter{
+        gap: .5rem;
+    }
+    .limite-art{
+        width: 80%;
+    }
+    .artigos-descricao{
+        width: 80%;
+    }
+    .artigos .artigos-descricao{
+        align-items: start;
+    }
+    footer{
+        padding: 0;
+    }
+    .limitado{
+        width: 80%;
+        padding: 3rem;
+    }
+    .foot-logo{
+        gap: 2rem;
+    }
+    .foot-nav ul,.foot-request{
+        gap: 1.5rem;
     }
 }
